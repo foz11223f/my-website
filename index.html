@@ -20,7 +20,6 @@
         section {
             padding: 20px;
             text-align: left;
-            display: none; /* 初始隐藏页面内容 */
         }
         footer {
             background-color: #333;
@@ -30,7 +29,6 @@
             position: fixed;
             width: 100%;
             bottom: 0;
-            display: none; /* 初始隐藏页脚内容 */
         }
         .profile-picture {
             width: 300px;
@@ -84,12 +82,6 @@
     <header>
         <h1>Life Record of CFZ</h1>
     </header>
-    <div class="password-container">
-        <h2>请输入密码</h2>
-        <input type="password" id="password" placeholder="密码">
-        <button class="btn" onclick="checkPassword()">提交</button>
-    </div>
-    
     <section class="center">
         <h2>About Foz</h2>
         <img src="image/profile.jpg" alt="Profile Picture" class="profile-picture">
@@ -179,20 +171,6 @@
                 imagesDiv.classList.remove("hidden");
             } else {
                 imagesDiv.classList.add("hidden");
-            }
-        }
-        function checkPassword() {
-            var password = document.getElementById('password').value;
-            var correctPassword = '0624'; // 设置你的密码
-
-            if (password === correctPassword) {
-                document.querySelector('.password-container').style.display = 'none';
-                document.querySelectorAll('section').forEach(function(section) {
-                    section.style.display = 'block';
-               });
-                document.querySelector('footer').style.display = 'block';
-            } else {
-                alert('密码错误，请重试。');
             }
         }
         
