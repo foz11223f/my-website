@@ -19,6 +19,8 @@
         }
         section {
             padding: 20px;
+            text-align: left;
+            display: none; /* 初始隐藏页面内容 */
         }
         footer {
             background-color: #333;
@@ -28,13 +30,14 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+            display: none; /* 初始隐藏页脚内容 */
         }
         .profile-picture {
             width: 300px;
             height: auto;
             border-radius: 50%;
         }
-        .about-me, .education, .travel, .work {
+        .center {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
@@ -46,14 +49,13 @@
         }
         .spaced-paragraph {
             margin-bottom: 150px; /* 增加段落间的间距 */
-            
         }
         .hidden {
             display: none;
         }
         .btn {
             display: inline-block;
-            padding: 8px 15px;
+            padding: 2px 15px;
             font-size: 16px;
             cursor: pointer;
             text-align: center;
@@ -72,56 +74,104 @@
             box-shadow: 0 5px #666;
             transform: translateY(4px);
         }
+        .password-container {
+            text-align: center;
+            margin-top: 20%;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Life Record of CFZ</h1>
     </header>
-    <section class="about-me">
+    <div class="password-container">
+        <h2>请输入密码</h2>
+        <input type="password" id="password" placeholder="密码">
+        <button class="btn" onclick="checkPassword()">提交</button>
+    </div>
+    <section class="center">
         <h2>About Foz</h2>
         <img src="image/profile.jpg" alt="Profile Picture" class="profile-picture">
-        <p>湖南常德人，1997年出生</p>
+        <p>湖南常德人，1997年出生，中共党员</p>
     </section>
-    <section class="education">
-        <h2>教育经历</h2>
+    <section class="left">
+        <h2 class="center">教育经历</h2>
         <p><strong>本科</strong></p>
-        <p  class="left">2015年9月——2019年6月就读于中南大学，电子信息科学与技术专业，1505班，国防生  <button class="btn" onclick="toggleImages()"style="margin-left: 20px;">大学图集</button></p>
-
+        <p>2015年9月——2019年6月就读于中南大学，电子信息科学与技术专业，1505班，国防生 <button class="btn" onclick="toggleImages('education-images')"style="margin-left: 20px;">图</button></p>
         <div id="education-images" class="hidden">
             <img src="image/CSU1.jpg" alt="CSU1" style="width:40%; margin-top: 0px;">
-            <img src="image/CSU4.jpg" alt="CSU1" style="width:40%; margin-top: 0px;">
+            <img src="image/CSU4.jpg" alt="CSU4" style="width:39%; margin-top: 0px;">
             <img src="image/CSU2.jpg" alt="CSU2" style="width:40%; margin-top: 0px;">
             <img src="image/CSU3.jpg" alt="CSU3" style="width:40%; margin-top: 0px;">
         </div>
         <p><strong>硕士</strong></p>
-        <p class="left">2019年9月——2021年11月就读于加泰罗尼亚理工大学，电信工程应用与管理专业</p>
-
+        <p>2019年9月——2021年11月就读于加泰罗尼亚理工大学，电信工程应用与管理专业</p>
     </section>
-    <section class="travel">
-        <h2>旅游经历</h2>
-        <p>Foz热爱旅游</p>
+    <section  class="left">
+        <h2 class="center">旅行经历</h2>
         <p><strong>国外</strong></p>
-        <p>国外去过：西班牙、法国、德国、意大利。</p>
+        <p>西班牙（巴塞罗那、马德里、塞维利亚、加那利群岛）；法国（巴黎）；德国（法兰克福）；意大利（米兰）</p>
         <p><strong>国内</strong></p>
+        <p>直辖市（4个）：北京；天津；上海；重庆</p>
+        <p>自治区（3个）：西藏（拉萨、山南、林芝）；广西（南宁、来宾、桂林）；宁夏（银川）</p>
+        <p>特别行政区（1个）：香港</p>
+        <p>省（19个）：湖南（长沙、常德、益阳、张家界、衡阳）；山东（青岛、烟台、威海、淄博、泰安）；青海（海西、海北、海南州、西宁）；云南（昆明、大理、丽江）；
+            海南（海口、三亚）；四川（成都、德阳）；甘肃（兰州、张掖）；河南（郑州、洛阳）；广东（深圳、广州）；福建（福州、厦门）；湖北（武汉、黄石）；
+            贵州（贵阳）；山西（太原）；辽宁（沈阳）；河北（秦皇岛）；浙江（杭州）；江苏（南京）；江西（南昌）；陕西（西安）</p>
     </section>
-    <section class="work">
-        <h2>工作经历</h2>
-        <p class="spaced-paragraph">2021年11月——至今，就职于绿盟科技，任职创新研究院安全研究员、产品经理。</p>
+    <section class="left">
+        <h2 class="center">工作经历</h2>
+        <p>2021年11月——至今，就职于绿盟科技，任职创新研究院安全研究员、产品经理。</p>
+        <p><strong>对外演讲</strong></p>
+        <p>2022年：</p>
+        <p>1. 5G网络创新研讨会（北京） <button class="btn" onclick="toggleImages('pres')"style="margin-left: 20px;">图</button></p>
+        <div id="pres" class="hidden">
+            <img src="image/pres2.jpg" alt="pres2" style="width:47.7%; margin-top: 0px;">
+            <img src="image/pres1.jpg" alt="pres1" style="width:20%; margin-top: 0px;">
+        </div>
+        <p>2. XCON信息安全技术峰会（北京） <button class="btn" onclick="toggleImages('pres2')"style="margin-left: 20px;">图</button></p>
+        <div id="pres2" class="hidden">
+            <img src="image/pres3.jpg" alt="pres3" style="width:55.5%; margin-top: 0px;">
+            <img src="image/pres4.jpg" alt="pres4" style="width:20%; margin-top: 0px;">
+        </div>
+        <p>3. 中国电信网络安全防护实践经验交流研讨会（银川） <button class="btn" onclick="toggleImages('pres3')"style="margin-left: 20px;">图</button></p>
+        <div id="pres3" class="hidden">
+            <img src="image/pres5.jpg" alt="pres5" style="width:55.5%; margin-top: 0px;">
+        </div>
+        <p>4. 移动云安全技术沙龙（苏州） <button class="btn" onclick="toggleImages('pres4')"style="margin-left: 20px;">图</button></p>
+        <div id="pres4" class="hidden">
+            <img src="image/pres6.jpg" alt="pres6" style="width:20%; margin-top: 0px;">
+        </div>
+        <p>2023年：</p>  
+        <p class="spaced-paragraph"></p>
     </section>
     <footer>
         <p>&copy; 2024 [FOZ]. All rights reserved.</p>
     </footer>
-
     <script>
-        function toggleImages() {
-            var imagesDiv = document.getElementById("education-images");
+        function toggleImages(id) {
+            var imagesDiv = document.getElementById(id);
             if (imagesDiv.classList.contains("hidden")) {
                 imagesDiv.classList.remove("hidden");
             } else {
                 imagesDiv.classList.add("hidden");
             }
         }
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            var correctPassword = '0624'; // 设置你的密码
+
+            if (password === correctPassword) {
+                document.querySelector('.password-container').style.display = 'none';
+                document.querySelectorAll('section').forEach(function(section) {
+                    section.style.display = 'block';
+               });
+                document.querySelector('footer').style.display = 'block';
+            } else {
+                alert('密码错误，请重试。');
+            }
+        }
+        
     </script>
 </body>
 </html>
