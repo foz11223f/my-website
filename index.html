@@ -39,6 +39,11 @@
             margin: 0 auto;
             text-align: center;
         }
+        .left {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
         .spaced-paragraph {
             margin-bottom: 150px; /* 增加段落间的间距 */
             
@@ -81,9 +86,8 @@
     <section class="education">
         <h2>教育经历</h2>
         <p><strong>本科</strong></p>
-        <p>2015年9月——2019年6月就读于中南大学，电子信息科学与技术专业，1505班，国防生
-            <button class="btn" onclick="toggleImages()" style="margin-left: 20px;">大学图集</button>
-        </p>
+        <p  class="left">2015年9月——2019年6月就读于中南大学，电子信息科学与技术专业，1505班，国防生  <button class="btn" onclick="toggleImages()"style="margin-left: 20px;">大学图集</button></p>
+
         <div id="education-images" class="hidden">
             <img src="image/CSU1.jpg" alt="CSU1" style="width:40%; margin-top: 0px;">
             <img src="image/CSU4.jpg" alt="CSU1" style="width:40%; margin-top: 0px;">
@@ -91,14 +95,14 @@
             <img src="image/CSU3.jpg" alt="CSU3" style="width:40%; margin-top: 0px;">
         </div>
         <p><strong>硕士</strong></p>
-        <p>2019年9月——2021年11月就读于加泰罗尼亚理工大学，电信工程应用与管理专业</p>
+        <p class="left">2019年9月——2021年11月就读于加泰罗尼亚理工大学，电信工程应用与管理专业</p>
 
     </section>
     <section class="travel">
         <h2>旅游经历</h2>
         <p>Foz热爱旅游</p>
         <p><strong>国外</strong></p>
-        <p>西班牙、法国、德国、意大利。</p>
+        <p>国外去过：西班牙、法国、德国、意大利。</p>
         <p><strong>国内</strong></p>
     </section>
     <section class="work">
