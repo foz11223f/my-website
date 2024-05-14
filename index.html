@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Life Record of CFZ</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,18 +29,95 @@
             width: 100%;
             bottom: 0;
         }
+        .profile-picture {
+            width: 300px;
+            height: auto;
+            border-radius: 50%;
+        }
+        .about-me, .education, .travel, .work {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .spaced-paragraph {
+            margin-bottom: 150px; /* 增加段落间的间距 */
+            
+        }
+        .hidden {
+            display: none;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 15px;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+        .btn:active {
+            background-color: #555;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>欢迎来到陈佛忠的世界</h1>
+        <h1>Life Record of CFZ</h1>
     </header>
-    <section>
+    <section class="about-me">
         <h2>About Foz</h2>
-        <p>Hello! 我是陈佛忠.</p>
+        <img src="image/profile.jpg" alt="Profile Picture" class="profile-picture">
+        <p>湖南常德人，1997年出生</p>
+    </section>
+    <section class="education">
+        <h2>教育经历</h2>
+        <p><strong>本科</strong></p>
+        <p>2015年9月——2019年6月就读于中南大学，电子信息科学与技术专业，1505班，国防生
+            <button class="btn" onclick="toggleImages()" style="margin-left: 20px;">大学图集</button>
+        </p>
+        <div id="education-images" class="hidden">
+            <img src="image/CSU1.jpg" alt="CSU1" style="width:40%; margin-top: 0px;">
+            <img src="image/CSU4.jpg" alt="CSU1" style="width:40%; margin-top: 0px;">
+            <img src="image/CSU2.jpg" alt="CSU2" style="width:40%; margin-top: 0px;">
+            <img src="image/CSU3.jpg" alt="CSU3" style="width:40%; margin-top: 0px;">
+        </div>
+        <p><strong>硕士</strong></p>
+        <p>2019年9月——2021年11月就读于加泰罗尼亚理工大学，电信工程应用与管理专业</p>
+
+    </section>
+    <section class="travel">
+        <h2>旅游经历</h2>
+        <p>Foz热爱旅游</p>
+        <p><strong>国外</strong></p>
+        <p>西班牙、法国、德国、意大利。</p>
+        <p><strong>国内</strong></p>
+    </section>
+    <section class="work">
+        <h2>工作经历</h2>
+        <p class="spaced-paragraph">2021年11月——至今，就职于绿盟科技，任职创新研究院安全研究员、产品经理。</p>
     </section>
     <footer>
-        <p>&copy; 2024 [Foz]. All rights reserved.</p>
+        <p>&copy; 2024 [FOZ]. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleImages() {
+            var imagesDiv = document.getElementById("education-images");
+            if (imagesDiv.classList.contains("hidden")) {
+                imagesDiv.classList.remove("hidden");
+            } else {
+                imagesDiv.classList.add("hidden");
+            }
+        }
+    </script>
 </body>
 </html>
