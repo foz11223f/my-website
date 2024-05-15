@@ -48,6 +48,9 @@
         .spaced-paragraph {
             margin-bottom: 150px; /* 增加段落间的间距 */
         }
+        .spaced-paragraph2 {
+            margin-bottom: 15px; /* 增加段落间的间距 */
+        }
         .hidden {
             display: none;
         }
@@ -76,45 +79,84 @@
             text-align: center;
             margin-top: 20%;
         }
+        nav {margin: 10px 0;
+        }
+        nav a {
+            color: #fff; /* 链接文本颜色 */
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #ff0; /* 悬停时链接文本颜色 */
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Life Record of CFZ</h1>
+        <nav>
+            <a href="#education">教育经历</a> |
+            <a href="#travel">旅行经历</a> |
+            <a href="#work">工作经历</a> |
+            <a href="#football">足球</a>
+        </nav>
     </header>
     <section class="center">
         <h2>About Foz</h2>
         <img src="image/profile.jpg" alt="Profile Picture" class="profile-picture">
         <p>湖南常德人，1997年出生，中共党员</p>
     </section>
-    <section class="left">
+    <section id="education" class="left">
         <h2 class="center">教育经历</h2>
         <p><strong>本科</strong></p>
-        <p>2015年9月——2019年6月就读于中南大学，电子信息科学与技术专业，1505班，国防生 <button class="btn" onclick="toggleImages('education-images')"style="margin-left: 20px;">图</button></p>
+        <p>2015年9月——2019年6月就读于中南大学，电子信息科学与技术专业</p>
+        <p> & 带训成果 <button class="btn" onclick="toggleImages('CSUaward')"style="margin-left: 20px;">图</button> </p> 
+        <div id="CSUaward" class="hidden">
+            <img src="image/CSUaward1.jpg" alt="CSUaward1" style="width:40%; margin-top: 0px;">
+        </div>
+        <p> & 毕业照  <button class="btn" onclick="toggleImages('education-images')"style="margin-left: 20px;">图</button> </p> 
         <div id="education-images" class="hidden">
             <img src="image/CSU1.jpg" alt="CSU1" style="width:40%; margin-top: 0px;">
-            <img src="image/CSU4.jpg" alt="CSU4" style="width:39%; margin-top: 0px;">
-            <img src="image/CSU2.jpg" alt="CSU2" style="width:40%; margin-top: 0px;">
-            <img src="image/CSU3.jpg" alt="CSU3" style="width:40%; margin-top: 0px;">
+            <img src="image/CSU2.jpg" alt="CSU2" style="width:17.4%; margin-top: 0px;">
         </div>
         <p><strong>硕士</strong></p>
-        <p>2019年9月——2021年11月就读于加泰罗尼亚理工大学，电信工程应用与管理专业</p>
+        <p>2019年9月——2021年11月就读于加泰罗尼亚理工大学（QS工科排名全球第67位，
+            <a href="https://baike.baidu.com/item/%E5%8A%A0%E6%B3%B0%E7%BD%97%E5%B0%BC%E4%BA%9A%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6/7384070" target="_blank">
+                更多学校介绍</a>），电信工程应用与管理专业</p>
+        <p> & Distinction award（21-22学年专业第一）  <button class="btn" onclick="toggleImages('upcaward')"style="margin-left: 20px;">图</button> </p>
+        <div id="upcaward" class="hidden">
+            <img src="image/upcaward1.jpg" alt="upcaward1" style="width:30%; margin-top: 0px;">
+            <img src="image/upcaward2.jpg" alt="upcaward2" style="width:39.2%; margin-top: 0px;">
+            <img src="image/upcaward3.jpg" alt="upcaward3" style="width:40%; margin-top: 0px;">
+            <img src="image/upcaward4.jpg" alt="upcaward4" style="width:26%; margin-top: 0px;">
+        </div>
+        <p> & AI研究报告入选国际会议  <button class="btn" onclick="toggleImages('upcaward2')"style="margin-left: 20px;">图</button> </p>
+        <div id="upcaward2" class="hidden">
+            <img src="image/upcaward5.jpg" alt="upcaward5" style="width:30%; margin-top: 0px;">
+        </div>
+        <p> & 毕业照  <button class="btn" onclick="toggleImages('UPC')"style="margin-left: 20px;">图</button> </p>
+        <div id="UPC" class="hidden">
+            <img src="image/UPC.jpg" alt="UPC" style="width:30%; margin-top: 0px;">
+        </div>
     </section>
-    <section  class="left">
+    <section id="travel" class="left">
         <h2 class="center">旅行经历</h2>
         <p><strong>国外</strong></p>
         <p>西班牙（巴塞罗那、马德里、塞维利亚、加那利群岛）；法国（巴黎）；德国（法兰克福）；意大利（米兰）</p>
         <p><strong>国内</strong></p>
-        <p>直辖市（4个）：北京；天津；上海；重庆</p>
-        <p>自治区（3个）：西藏（拉萨、山南、林芝）；广西（南宁、来宾、桂林）；宁夏（银川）</p>
-        <p>特别行政区（1个）：香港</p>
-        <p>省（19个）：湖南（长沙、常德、益阳、张家界、衡阳）；山东（青岛、烟台、威海、淄博、泰安）；青海（海西、海北、海南州、西宁）；云南（昆明、大理、丽江）；
+        <p>1. 直辖市（4个）：北京；天津；上海；重庆</p>
+        <p>2. 自治区（3个）：西藏（拉萨、山南、林芝）；广西（南宁、来宾、桂林）；宁夏（银川）</p>
+        <p>3. 特别行政区（1个）：香港</p>
+        <p>4. 省（19个）：湖南（长沙、常德、益阳、张家界、衡阳）；山东（青岛、烟台、威海、淄博、泰安）；青海（海西、海北、海南州、西宁）；云南（昆明、大理、丽江）；
             海南（海口、三亚）；四川（成都、德阳）；甘肃（兰州、张掖）；河南（郑州、洛阳）；广东（深圳、广州）；福建（福州、厦门）；湖北（武汉、黄石）；
             贵州（贵阳）；山西（太原）；辽宁（沈阳）；河北（秦皇岛）；浙江（杭州）；江苏（南京）；江西（南昌）；陕西（西安）</p>
     </section>
-    <section class="left">
+    <section  id="work" class="left">
         <h2 class="center">工作经历</h2>
-        <p>2021年11月——至今，就职于绿盟科技，任职创新研究院安全研究员、产品经理。</p>
+        <p class="spaced-paragraph2"></p>
+        <p class="center">2021年11月——至今，就职于绿盟科技，任职创新研究院安全研究员、产品经理</p>
         <p><strong>对外演讲</strong></p>
         <p>2022年：</p>
         <p>1. 5G网络创新研讨会（北京） <button class="btn" onclick="toggleImages('pres')"style="margin-left: 20px;">图</button>
@@ -159,7 +201,98 @@
         <p>7.《DevOps风险测绘之代码篇》 <a href="http://blog.nsfocus.net/devops/" target="_blank">链接</a> </p> 
         <p>8.《隐私计算在医疗行业的应用》 <a href="http://blog.nsfocus.net/applicationofprivacycomputing/" target="_blank">链接</a> </p> 
         <p>9.《创新方案，如何更有效地预防数据泄露？》 <a href="http://blog.nsfocus.net/data-leak/" target="_blank">链接</a> </p> 
-        <p class="spaced-paragraph"></p>
+        <p><strong>荣誉奖励</strong></p>
+        <p>1. 2022产研大比武雏鹰赛道二等奖 <button class="btn" onclick="toggleImages('award1')"style="margin-left: 20px;">图</button></p>
+        <div id="award1" class="hidden">
+           <img src="image/award1.jpg" alt="award1" style="width:20%; margin-top: 0px;">
+        </div>
+        <p>2. 2022产研体系“最具正能量”奖 <button class="btn" onclick="toggleImages('award2')"style="margin-left: 20px;">图</button></p>
+        <div id="award2" class="hidden">
+            <img src="image/award2.jpg" alt="award2" style="width:20%; margin-top: 0px;">
+        </div>
+        <p>3. 2023年度内部讲师“最佳分享官” <button class="btn" onclick="toggleImages('award3')"style="margin-left: 20px;">图</button></p>
+        <div id="award3" class="hidden">
+                <img src="image/award3.jpg" alt="award3" style="width:20%; margin-top: 0px;">
+        </div>
+        <p>4. 2023年度产研线优秀个人 <button class="btn" onclick="toggleImages('award4')"style="margin-left: 20px;">图</button></p>
+        <div id="award4" class="hidden">
+                    <img src="image/award4.jpg" alt="award4" style="width:20%; margin-top: 0px;">
+        </div>
+
+    </section>
+    <section  id="football" class="left">
+        <h2 class="center">足球</h2>
+        <p class="spaced-paragraph2"></p>
+        <p class="center">巴塞罗那队粉，支持梅西和苏亚雷斯</p>
+        <p><strong>球星合影</strong></p>
+        <p>1. 巴萨&迈阿密F4老友：梅西 <button class="btn" onclick="toggleImages('pic1')"style="margin-left: 8px;">图</button>   |  |  
+            苏亚雷斯 <button class="btn" onclick="toggleImages('pic2')"style="margin-left: 8px;">图</button>   |  |
+            阿尔巴 <button class="btn" onclick="toggleImages('pic3')"style="margin-left: 8px;">图</button>   |  | 
+            布斯克茨 <button class="btn" onclick="toggleImages('pic4')"style="margin-left: 8px;">图</button>
+            <div id="pic1" class="hidden">
+                <img src="image/pic1.jpg" alt="pic1" style="width:20%; margin-top: 0px;">
+            </div>
+            <div id="pic2" class="hidden">
+                <img src="image/pic2.jpg" alt="pic2" style="width:20%; margin-top: 0px;">
+            </div>
+            <div id="pic3" class="hidden">
+                <img src="image/pic3.jpg" alt="pic3" style="width:20%; margin-top: 0px;">
+            </div>
+            <div id="pic4" class="hidden">
+                <img src="image/pic4.jpg" alt="pic4" style="width:20%; margin-top: 0px;">
+            </div>    
+        </p> 
+        <p> 2. 巴萨系其他：拉基蒂奇 <button class="btn" onclick="toggleImages('pic5')"style="margin-left: 8px;">图</button>   |  | 
+            德容 <button class="btn" onclick="toggleImages('pic6')"style="margin-left: 8px;">图</button>   |  |
+            罗贝托 <button class="btn" onclick="toggleImages('pic7')"style="margin-left: 8px;">图</button>   |  | 
+            朗格莱 <button class="btn" onclick="toggleImages('pic8')"style="margin-left: 8px;">图</button>   |  |
+            特尔斯特根 <button class="btn" onclick="toggleImages('pic9')"style="margin-left: 8px;">图</button>   |  |
+            <div id="pic5" class="hidden">
+                <img src="image/pic5.jpg" alt="pic5" style="width:20%; margin-top: 0px;">
+            </div>
+            <div id="pic6" class="hidden">
+                <img src="image/pic6.jpg" alt="pic6" style="width:20%; margin-top: 0px;">
+            </div>
+            <div id="pic7" class="hidden">
+                <img src="image/pic7.jpg" alt="pic7" style="width:20%; margin-top: 0px;">
+            </div>
+            <div id="pic8" class="hidden">
+                <img src="image/pic8.jpg" alt="pic8" style="width:20%; margin-top: 0px;">
+            </div>
+            <div id="pic9" class="hidden">
+                <img src="image/pic9.jpg" alt="pic9" style="width:20%; margin-top: 0px;">
+            </div>
+        </p>
+        <p>
+            法蒂 <button class="btn" onclick="toggleImages('pic10')"style="margin-left: 8px;">图</button>   |  |   
+            阿图尔 <button class="btn" onclick="toggleImages('pic11')"style="margin-left: 8px;">图</button>   |  |
+            登贝莱 <button class="btn" onclick="toggleImages('pic12')"style="margin-left: 8px;">图</button>   |  |   
+            巴尔韦德 <button class="btn" onclick="toggleImages('pic13')"style="margin-left: 8px;">图</button> 
+            <div id="pic10" class="hidden">
+                <img src="image/pic10.jpg" alt="pic10" style="width:20%; margin-top: 0px;">
+            </div>
+            <div id="pic11" class="hidden">
+                <img src="image/pic11.jpg" alt="pic11" style="width:20%; margin-top: 0px;">
+            </div>
+            <div id="pic12" class="hidden">
+                <img src="image/pic12.jpg" alt="pic12" style="width:20%; margin-top: 0px;">
+            </div>
+            <div id="pic13" class="hidden">
+                <img src="image/pic13.jpg" alt="pic13" style="width:20%; margin-top: 0px;">
+            </div>
+        </p>
+        <p> 3. 国内巨星：武磊 <button class="btn" onclick="toggleImages('pic14')"style="margin-left: 8px;">图</button>
+            <div id="pic14" class="hidden">
+                <img src="image/pic14.jpg" alt="pic14" style="width:20%; margin-top: 0px;">
+            </div>
+        </p>
+        <p><strong>签名球衣</strong></p> 
+        <p> 巴萨签名球衣 <button class="btn" onclick="toggleImages('pic15')"style="margin-left: 8px;">图</button>
+            <div id="pic15" class="hidden">
+                <img src="image/pic15.jpg" alt="pic15" style="width:20%; margin-top: 0px;">
+            </div>
+        </p> 
+        <p class="spaced-paragraph"></p>  /* 放最后 */
     </section>
     <footer>
         <p>&copy; 2024 [FOZ]. All rights reserved.</p>
