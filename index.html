@@ -70,7 +70,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影，使按钮更加立体 */
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #004eb3;
         }
         .btn:active {
             background-color: #555;
@@ -110,7 +110,8 @@
             <a href="#education">教育经历</a> |
             <a href="#travel">旅行经历</a> |
             <a href="#work">工作经历</a> |
-            <a href="#football">足球</a>
+            <a href="#football">足球</a> |
+            <a href="#award">奖项及证书</a> 
         </nav>
     </header>
     <section class="center">
@@ -122,24 +123,8 @@
         <h2 class="center">教育经历</h2>
         <p><strong>本科</strong></p>
         <p>2015年9月——2019年6月就读于中南大学（985），电子信息科学与技术专业</p>
-        <p> & 校定向越野二等奖 <button class="btn" onclick="toggleImages('CSUaward2')"style="margin-left: 10px;">图</button> （注：开了梯子，图片加载会加快）|  |
-            校龙狮锦标赛第三名 <button class="btn" onclick="toggleImages('CSUaward3')"style="margin-left: 10px;">图</button> |  |
-            院朗诵比赛二等奖 <button class="btn" onclick="toggleImages('CSUaward4')"style="margin-left: 10px;">图</button> 
-        <div id="CSUaward2" class="hidden">
-            <img src="image/CSUaward2.jpg" alt="CSUaward2" style="width:40%; margin-top: 0px;">
-        </div>
-        <div id="CSUaward3" class="hidden">
-            <img src="image/CSUaward3.jpg" alt="CSUaward3" style="width:40%; margin-top: 0px;">
-        </div>
-        <div id="CSUaward4" class="hidden">
-            <img src="image/CSUaward4.jpg" alt="CSUaward4" style="width:40%; margin-top: 0px;">
-        </div>
-        </p> 
-        <p> & 带训所获荣誉（两个一等奖，两个二等奖，两个三等奖） <button class="btn" onclick="toggleImages('CSUaward')"style="margin-left: 10px;">图</button> </p> 
-        <div id="CSUaward" class="hidden">
-            <img src="image/CSUaward1.jpg" alt="CSUaward1" style="width:40%; margin-top: 0px;">
-        </div>
-        <p> & 毕业照  <button class="btn" onclick="toggleImages('education-images')"style="margin-left: 20px;">图</button> </p> 
+
+        <p> & 毕业照（注：开了梯子，图片加载会加快）  <button class="btn" onclick="toggleImages('education-images')"style="margin-left: 20px;">图</button> </p> 
         <div id="education-images" class="hidden">
             <img src="image/CSU1.jpg" alt="CSU1" style="width:40%; margin-top: 0px;">
             <img src="image/CSU2.jpg" alt="CSU2" style="width:17.4%; margin-top: 0px;">
@@ -148,17 +133,7 @@
         <p>2019年9月——2021年11月就读于加泰罗尼亚理工大学（QS工科排名全球第67位，
             <a href="https://baike.baidu.com/item/%E5%8A%A0%E6%B3%B0%E7%BD%97%E5%B0%BC%E4%BA%9A%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6/7384070" target="_blank">
                 更多学校介绍</a>），电信工程应用与管理专业</p>
-        <p> & Distinction award（21-22学年专业第一）  <button class="btn" onclick="toggleImages('upcaward')"style="margin-left: 20px;">图</button> </p>
-        <div id="upcaward" class="hidden">
-            <img src="image/upcaward1.jpg" alt="upcaward1" style="width:30%; margin-top: 0px;">
-            <img src="image/upcaward2.jpg" alt="upcaward2" style="width:39.2%; margin-top: 0px;">
-            <img src="image/upcaward3.jpg" alt="upcaward3" style="width:40%; margin-top: 0px;">
-            <img src="image/upcaward4.jpg" alt="upcaward4" style="width:26%; margin-top: 0px;">
-        </div>
-        <p> & AI研究报告入选国际会议  <button class="btn" onclick="toggleImages('upcaward2')"style="margin-left: 20px;">图</button> </p>
-        <div id="upcaward2" class="hidden">
-            <img src="image/upcaward5.jpg" alt="upcaward5" style="width:30%; margin-top: 0px;">
-        </div>
+
         <p> & 毕业照  <button class="btn" onclick="toggleImages('UPC')"style="margin-left: 20px;">图</button> </p>
         <div id="UPC" class="hidden">
             <img src="image/UPC.jpg" alt="UPC" style="width:30%; margin-top: 0px;">
@@ -263,23 +238,7 @@
         <p>7.《DevOps风险测绘之代码篇》 <a href="http://blog.nsfocus.net/devops/" target="_blank">链接</a> </p> 
         <p>8.《隐私计算在医疗行业的应用》 <a href="http://blog.nsfocus.net/applicationofprivacycomputing/" target="_blank">链接</a> </p> 
         <p>9.《创新方案，如何更有效地预防数据泄露？》 <a href="http://blog.nsfocus.net/data-leak/" target="_blank">链接</a> </p> 
-        <p><strong>荣誉奖励</strong></p>
-        <p>1. 2022产研线大比武二等奖 <button class="btn" onclick="toggleImages('award1')"style="margin-left: 20px;">图</button></p>
-        <div id="award1" class="hidden">
-           <img src="image/award1.jpg" alt="award1" style="width:20%; margin-top: 0px;">
-        </div>
-        <p>2. 2022产研线“最具正能量”奖 <button class="btn" onclick="toggleImages('award2')"style="margin-left: 20px;">图</button></p>
-        <div id="award2" class="hidden">
-            <img src="image/award2.jpg" alt="award2" style="width:20%; margin-top: 0px;">
-        </div>
-        <p>3. 2023年度公司“最佳分享官” <button class="btn" onclick="toggleImages('award3')"style="margin-left: 20px;">图</button></p>
-        <div id="award3" class="hidden">
-                <img src="image/award3.jpg" alt="award3" style="width:20%; margin-top: 0px;">
-        </div>
-        <p>4. 2023年度产研线优秀个人 <button class="btn" onclick="toggleImages('award4')"style="margin-left: 20px;">图</button></p>
-        <div id="award4" class="hidden">
-                    <img src="image/award4.jpg" alt="award4" style="width:20%; margin-top: 0px;">
-        </div>
+
 
     </section>
     <section  id="football" class="left">
@@ -421,8 +380,67 @@
                 <img src="image/footballaward2.jpg" alt="footballaward2" style="width:25%; margin-top: 0px;">
             </div>
         </p> 
+    </section>
+
+    <section  id="award" class="left">
+        <h2 class="center">奖项及证书</h2>
+        <p class="spaced-paragraph2"></p>
+        <p><strong>奖项</strong></p>
+        <p> & 【UPC】 Distinction award（专业第一奖）  <button class="btn" onclick="toggleImages('upcaward')"style="margin-left: 20px;">图</button> </p>
+        <div id="upcaward" class="hidden">
+            <img src="image/upcaward1.jpg" alt="upcaward1" style="width:30%; margin-top: 0px;">
+            <img src="image/upcaward2.jpg" alt="upcaward2" style="width:39.2%; margin-top: 0px;">
+            <img src="image/upcaward3.jpg" alt="upcaward3" style="width:40%; margin-top: 0px;">
+            <img src="image/upcaward4.jpg" alt="upcaward4" style="width:26%; margin-top: 0px;">
+        </div>
+        <p> & 【UPC】 AI研究报告入选国际会议  <button class="btn" onclick="toggleImages('upcaward2')"style="margin-left: 20px;">图</button> </p>
+        <div id="upcaward2" class="hidden">
+            <img src="image/upcaward5.jpg" alt="upcaward5" style="width:30%; margin-top: 0px;">
+        </div>
+        <p> & 【绿盟】2022产研线大比武二等奖 <button class="btn" onclick="toggleImages('award1')"style="margin-left: 20px;">图</button></p>
+        <div id="award1" class="hidden">
+           <img src="image/award1.jpg" alt="award1" style="width:20%; margin-top: 0px;">
+        </div>
+        <p> & 【绿盟】2022产研线“最具正能量”奖 <button class="btn" onclick="toggleImages('award2')"style="margin-left: 20px;">图</button></p>
+        <div id="award2" class="hidden">
+            <img src="image/award2.jpg" alt="award2" style="width:20%; margin-top: 0px;">
+        </div>
+        <p> & 【绿盟】2023年度公司“最佳分享官” <button class="btn" onclick="toggleImages('award3')"style="margin-left: 20px;">图</button></p>
+        <div id="award3" class="hidden">
+                <img src="image/award3.jpg" alt="award3" style="width:20%; margin-top: 0px;">
+        </div>
+        <p> & 【绿盟】2023年度产研线优秀个人 <button class="btn" onclick="toggleImages('award4')"style="margin-left: 20px;">图</button></p>
+        <div id="award4" class="hidden">
+                    <img src="image/award4.jpg" alt="award4" style="width:20%; margin-top: 0px;">
+        </div>
+        <p> & 【中南】校定向越野二等奖 <button class="btn" onclick="toggleImages('CSUaward2')"style="margin-left: 10px;">图</button> 
+            <div id="CSUaward2" class="hidden">
+                <img src="image/CSUaward2.jpg" alt="CSUaward2" style="width:40%; margin-top: 0px;">
+            </div>
+        </p> 
+        <p> & 【中南】校龙狮锦标赛第三名 <button class="btn" onclick="toggleImages('CSUaward3')"style="margin-left: 10px;">图</button> 
+        <div id="CSUaward3" class="hidden">
+            <img src="image/CSUaward3.jpg" alt="CSUaward3" style="width:40%; margin-top: 0px;">
+        </div>
+        </p> 
+        <p> & 【中南】院朗诵比赛二等奖 <button class="btn" onclick="toggleImages('CSUaward4')"style="margin-left: 10px;">图</button> 
+        <div id="CSUaward4" class="hidden">
+            <img src="image/CSUaward4.jpg" alt="CSUaward4" style="width:40%; margin-top: 0px;">
+        </div>
+        </p> 
+        <p> & 【中南】带训所获奖项（两个校一等奖，两个校二等奖，两个校三等奖） <button class="btn" onclick="toggleImages('CSUaward')"style="margin-left: 10px;">图</button> </p> 
+        <div id="CSUaward" class="hidden">
+            <img src="image/CSUaward1.jpg" alt="CSUaward1" style="width:40%; margin-top: 0px;">
+        </div>
+        <p><strong>证书</strong></p>
+        <p> & 国际创业者【“Explorar” 颁发证书】
+        <p> & 5G行业专网解决方案高级工程师【“中国移动通信联合会教育与考试中心” 颁发证书】
+        <p> & 西班牙语B2等级证书
+        <p> & 英语B2等级证书
+            
         <p class="spaced-paragraph"></p>  /* 放最后 */
     </section>
+
     <footer>
         <p>&copy; 2024 [FOZ]. All rights reserved.</p>
     </footer>
